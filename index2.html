@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <span id="root"></span>
+</body>
+<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel">
+    const DOM = ReactDOM.createRoot(document.getElementById("root"))
+
+    function Btn({text}) {
+        return (
+            <button style={{
+                backgroundColor : "tomato",
+                color : "white",
+                padding : "10px 20px",
+                border : 0,
+                borderRadius : 10,
+                fontSize : "large"
+            }}>{text}</button>
+        )
+    }
+
+    function App() {
+        return (
+            <div>
+                <Btn text="change"/>
+                <Btn text="save"/>
+            </div>
+        )
+    };
+    DOM.render(<App />)
+
+
+</script>
+
+</html>
